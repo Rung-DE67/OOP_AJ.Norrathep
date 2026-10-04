@@ -1,6 +1,5 @@
 public class ESportsClubTest {
     public static void main(String[] args) {
-        // --- Part 1: Test with ESportsClub variable ---
         System.out.println("=== Testing ESportsClub e ===");
         ESportsClub e = new ESportsClub("Esport", 100);
         
@@ -14,7 +13,6 @@ public class ESportsClubTest {
 
         System.out.println();
 
-        // --- Part 2: Test with Club variable (Upcasting) ---
         System.out.println("=== Testing Club c ===");
         Club c = new ESportsClub("Esport", 100);
         
