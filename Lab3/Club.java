@@ -6,14 +6,14 @@ public class Club {
     // current number of members
     protected int numMember;
 
-    public Club(String c, int m) {
-        clubName = c;
-        minNumMember = m;
-        numMember = m;
+    public Club(String clubName, int minimumMembers) {
+        this.clubName = clubName;
+        minNumMember = minimumMembers;
+        numMember = minimumMembers;
     }
 
     public void addMember(int num) {
-        numMember = numMember + num;
+        numMember += num;
     }
 
     public void changeName(String newName) {
@@ -25,7 +25,7 @@ public class Club {
     }
 
     public int determineBudget() {
-        return (numMember * 1000);
+        return numMember * 1000;
     }
 
     public void advertise() {

@@ -1,19 +1,15 @@
 public class PaymentModule {
     private double totalPay;
 
-    public PaymentModule() {
-        totalPay = 0;
-    }
-
-    public void payment(Employee e) {
-        double pay = e.computePay();
-        if (e instanceof Manager) {
-            Manager m = (Manager) e;
-            if (m.getWorkYear() > 10) {
-                pay = pay * 2;
+    public void payment(Employee employee) {
+        double pay = employee.computePay();
+        if (employee instanceof Manager) {
+            Manager manager = (Manager) employee;
+            if (manager.getWorkYear() > 10) {
+                pay *= 2;
             }
         }
-        totalPay = totalPay + pay;
+        totalPay += pay;
     }
 
     public double getTotalPay() {

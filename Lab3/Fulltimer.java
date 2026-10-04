@@ -1,9 +1,9 @@
 public class Fulltimer extends Employee {
     private double salary;
 
-    public Fulltimer(String n, double s) {
-        name = n;
-        salary = s;
+    public Fulltimer(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
     }
 
     @Override

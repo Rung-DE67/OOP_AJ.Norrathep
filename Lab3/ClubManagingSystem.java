@@ -7,25 +7,30 @@ public class ClubManagingSystem {
 
     public int determineAllBudget() {
         int total = 0;
-        for (int i = 0; i < clubList.length; i++) {
-            total = total + clubList[i].determineBudget();
+        for (Club club : clubList) {
+            total += club.determineBudget();
         }
         return total;
     }
 
     public int getAllMembers() {
         int total = 0;
-        for (int i = 0; i < clubList.length; i++) {
-            total = total + clubList[i].numMember;
+        for (Club club : clubList) {
+            total += club.numMember;
         }
         return total;
     }
 
     public Club getHighestMemberClub() {
+        if (clubList.length == 0) {
+            return null;
+        }
+
         Club highest = clubList[0];
         for (int i = 1; i < clubList.length; i++) {
-            if (clubList[i].numMember > highest.numMember) {
-                highest = clubList[i];
+            Club club = clubList[i];
+            if (club.numMember > highest.numMember) {
+                highest = club;
             }
         }
         return highest;

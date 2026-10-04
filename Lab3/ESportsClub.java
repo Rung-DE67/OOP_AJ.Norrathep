@@ -1,6 +1,6 @@
-final public class ESportsClub extends SportsClub {
-    public ESportsClub(String c, int m) {
-        super(c, m);
+public final class ESportsClub extends SportsClub {
+    public ESportsClub(String clubName, int minimumMembers) {
+        super(clubName, minimumMembers);
         this.minNumMember = 1;
     }
 

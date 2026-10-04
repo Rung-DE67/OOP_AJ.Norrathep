@@ -1,17 +1,18 @@
 public class MarketingClub extends Club {
     private int budget;
 
-    public MarketingClub(String c, int m, int b) {
-        super(c, m);
-        this.budget = b;
+    public MarketingClub(String clubName, int minimumMembers, int budget) {
+        super(clubName, minimumMembers);
+        this.budget = budget;
     }
 
     public boolean useBudget(int amount) {
-        if (budget - amount >= 0) {
-            this.budget = budget - amount;
-            return true;
+        if (amount < 0 || amount > budget) {
+            return false;
         }
-        return false;
+
+        budget -= amount;
+        return true;
     }
 
     @Override

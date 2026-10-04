@@ -2,10 +2,10 @@ public class Hourly extends Employee {
     private double rate;
     private int hour;
 
-    public Hourly(String n, double r, int h) {
-        name = n;
-        hour = h;
-        rate = r;
+    public Hourly(String name, double hourlyRate, int hours) {
+        this.name = name;
+        hour = hours;
+        rate = hourlyRate;
     }
 
     @Override

@@ -11,7 +11,6 @@ public class AdvancedPaymentModuleTest {
         apm.payment(employees);
         System.out.println("Total pay after batch payment: " + apm.getTotalPay());
 
-        // Test single payment still works
         apm.payment(new Fulltimer("Eve", 30000));
         System.out.println("Total pay after adding Eve: " + apm.getTotalPay());
     }
